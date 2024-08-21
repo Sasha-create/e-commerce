@@ -113,6 +113,12 @@ USE_I18N = True
 USE_TZ = True
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.ws-eu115.gitpod.io",
+    "https://*.ws.codeinstitute-ide.net",
+    "https://*.herokuapp.com"
+]
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
