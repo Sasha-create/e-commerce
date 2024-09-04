@@ -7,10 +7,14 @@ for (i = 0; i < updateBtns.length; i++) {
         console.log('productId:', productId, 'Action:', action)
 
         console.log('USER:', user)
-        if (user == 'AnonymousUser'){
+        if (user === 'AnonymousUser'){
             console.log('User is not authenticated')
         }else{
-            console.log('User is authenticated, sending data ...')
+             updateUserOrder(productId, action)
         }
     })
+}
+
+function updateUserOrder(productId, action){
+    console.log('User is authenticated, sending data...')
 }
