@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hz7yv6ym893fza0_m&=p46lxg41&vgpbx6(%se2prgwm!u10jj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-sashacreate-ecommerce-l6szilvxaoe.ws-eu115.gitpod.io']
+ALLOWED_HOSTS = ['8000-sashacreate-ecommerce-l6szilvxaoe.ws-eu116.gitpod.io']
 
 
 # Application definition
@@ -114,6 +114,7 @@ USE_TZ = True
 
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
     "https://*.ws-eu115.gitpod.io",
     "https://*.ws.codeinstitute-ide.net",
     "https://*.herokuapp.com"

@@ -45,3 +45,15 @@ def updateItem(request):
 	order, created = Order.objects.get_or_create(customer=customer, complete=False)
 
 	orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
+    
+	if action == 'add':
+		orderItem.quantity = (orderItem.quentity + 1)
+	elif action == 'remove':
+		orderItem.quentity = (orderItem.quentity - 1)
+
+	orderItem.save()
+
+	if orderItem.quentity <= 0:
+		orderItem.delete()
+		
+	return JsinResponse('Item was added', safe=False)
