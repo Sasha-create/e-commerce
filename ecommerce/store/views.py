@@ -70,4 +70,4 @@ def updateItem(request):
 	if orderItem.quantity <= 0:
 		orderItem.delete()
 		
-	return JsinResponse('Item was added', safe=False)
+	return JsonResponse('Item was added', safe=False)
